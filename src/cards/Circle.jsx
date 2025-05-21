@@ -28,7 +28,7 @@ const Circle = ({ color = 'purple', shading = 'solid', quantity = 1 }) => {
   const circleElements = Array.from({ length: quantity }, (_, i) => renderCircle(i));
 
   return (
-    <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', gap: '10px', justifyContent: 'center' }} className='p-8 border-2 border-gray-300 rounded-lg shadow-md w-96 h-42 items-center'>
       {circleElements}
     </div>
   );
