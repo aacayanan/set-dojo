@@ -71,27 +71,30 @@ function App() {
     };
 
     return (
-        <div className='p-4 flex flex-col items-center justify-center h-screen bg-gray-100 gap-8'>
-            {cards.map(renderCard)}
-            <div className='flex gap-8 w-96 justify-center items-center'>
-                <button
-                    onClick={handleCheckSet}
-                    className='flex w-full justify-center bg-red-400 p-4 border-2 border-gray-600 rounded-lg shadow-md hover:bg-red-600'
-                >
-                    Invalid
-                </button>
-                <button
-                    onClick={handleCheckSet}
-                    className='flex w-full justify-center bg-green-400 p-4 border-2 border-gray-600 rounded-lg shadow-md hover:bg-green-600'
-                >
-                    Valid
-                </button>
-                <button
-                    className='border-2 border-gray-600 rounded-lg shadow-md p-3 hover:bg-gray-400'
-                    onClick={() => window.location.reload()}
-                ></button>
+        <div className='h-screen'>
+            <div className='flex justify-center bg-gray-100 text-gray-300'>made by aaron cayanan for discrete mathematics with professor kelly spoon</div>
+            <div className='p-4 flex flex-col items-center justify-center h-full bg-gray-100 gap-8'>
+                {cards.map(renderCard)}
+                <div className='flex gap-8 w-96 justify-center items-center'>
+                    <button
+                        onClick={handleCheckSet}
+                        className='flex w-full justify-center bg-red-400 p-4 border-2 border-gray-600 rounded-lg shadow-md hover:bg-red-600'
+                    >
+                        Invalid
+                    </button>
+                    <button
+                        onClick={handleCheckSet}
+                        className='flex w-full justify-center bg-green-400 p-4 border-2 border-gray-600 rounded-lg shadow-md hover:bg-green-600'
+                    >
+                        Valid
+                    </button>
+                    <button
+                        className='border-2 border-gray-600 rounded-lg shadow-md p-3 hover:bg-gray-400'
+                        onClick={() => window.location.reload()}
+                    ></button>
+                </div>
+                {result && <div className="text-center text-lg mt-4 w-full">{result}</div>}
             </div>
-            {result && <div className="text-center text-lg mt-4 w-full">{result}</div>}
         </div>
     );
 }
